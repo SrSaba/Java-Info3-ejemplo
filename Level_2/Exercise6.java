@@ -17,11 +17,14 @@ public class Exercise6 {
         for(Empleados empleado : empleados){
             Integer salario = empleado.horasTrabajadas * empleado.valorXhora;
             sueldos.put((empleado.dni), (salario));
-            for(Map.Entry<Integer, Integer> sueldo : sueldos.entrySet()){
-                if (sueldo.getKey() == empleado.dni);
-                System.out.println("Empleado con DNI " + empleado.dni + " recibe un sueldo de $" + sueldo.getValue());
-            }
+            // for(Map.Entry<Integer, Integer> sueldo : sueldos.entrySet()){
+            //     if (sueldo.getKey() == empleado.dni);
+            //     System.out.println("Empleado con DNI " + empleado.dni + " recibe un sueldo de $" + sueldo.getValue());
+            // }
             
+        }
+        for (Map.Entry<Integer, Integer> sueldo : sueldos.entrySet()){
+            System.out.println("Empleado con DNI " + sueldo.getKey() + " recibe un sueldo de $" + sueldo.getValue());
         }
     }
 }
